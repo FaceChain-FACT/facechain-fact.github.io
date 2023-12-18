@@ -208,7 +208,9 @@
             It trains a person's LoRA model to incorporate face information, and generates customized portraits. 
             However, due to the need to train users' LoRA models, FaceChain's pipeline is divided into two stages: training and inference, which greatly increases the user's cost. 
             We propose a single-stage version called FaceChain-FACT that does not require LoRA model training. 
-            We: 1. Integrate a transformer face feature extractor with the same structure as Stable Diffusion, which better enables SD to utilize face information; 
+            In addition, we <h1 style="font-weight: bold;">only require single photo</h1> of user to generate customized portraits
+            Compared to SOTA commercial applications, our generation speed is accelerated by 100 times, with second-level image generation speed.
+            FaceChain-FACT 1. Integrate a transformer face feature extractor with the same structure as Stable Diffusion, which better enables SD to utilize face information; 
             2. Generate using dense fine-grained features, with better replication effects; 
             3. Seamlessly compatible with ControlNet and LoRA plugins, plug and play.
           </p>
