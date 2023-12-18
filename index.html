@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>facechain-fact：face adapter for human aigc</title>
+  <title>FaceChain-fact：Face Adapter for Human AIGC</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -88,7 +88,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Facechain-FACT：face adapter for human aigc</h1>
+          <h1 class="title is-1 publication-title">FaceChain-FACT：Face Adapter for Human AIGC</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://haoyu-xie.github.io">Haoyu Xie</a>,</span>
@@ -200,11 +200,11 @@
             It trains a person's LoRA model to incorporate face information, and generates customized portraits. 
             However, due to the need to train users' LoRA models, FaceChain's pipeline is divided into two stages: training and inference, which increases the user's cost. 
             We propose a single-stage version called FaceChain-FACT that does <b>not require LoRA model training</b>. 
-            In addition, we <b>only require single photo</b> of user to generate customized portraits
+            In addition, we <b>only require single photo</b> of the user to generate customized portraits. 
             Compared to SOTA commercial applications, our generation speed is accelerated by 100 times, with second-level image generation speed.
-            FaceChain-FACT 1. Integrate a transformer face feature extractor with the same structure as Stable Diffusion, which better enables SD to utilize face information; 
-            2. Generate using dense fine-grained features, with better replication effects; 
-            3. Seamlessly compatible with ControlNet and LoRA plugins, plug and play.
+            We integrates a transformer-based face feature extractor with the same structure as Stable Diffusion, which better enables SD to utilize face information; 
+            We use dense fine-grained features as the face condition, with better character reappearance effects; 
+            FaceChain-FACT is seamlessly compatible with ControlNet and LoRA plugins, plug and play.
           </p>
         </div>
       </div>
@@ -219,7 +219,7 @@
           <p>
             We use a series of image preprocessing, including face segmentation, face cropping and alignment, hand detection, face quality screening, etc., to screen and obtain a training dataset. 
             We leverage a transformer-based face feature extractor to extract features and utilize the dense fine-grained features from the penultimate layer as the face condition.
-            Stable Diffusion receives the face condition through the FACT-Adapter and combines it with text to generate portrait images. By fusing various LoRA models from FaceChain, it can generate portraits with a variety of styles.
+            Stable Diffusion receives the face condition through the FACT-Adapter and combines it with text embeddings to generate portrait images. By fusing various LoRA models from FaceChain, it can generate portraits with a variety of styles.
           </p>
           <img src="./static/images/facechain-free-pipeline.png" alt="图片描述" width="900" height="900">
         </div>
