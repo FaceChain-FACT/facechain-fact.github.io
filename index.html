@@ -258,20 +258,18 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Nowadays, image generation technology has produced many shocking photos. 
+            Some subject-driven techniques have also tried to incorporate customized objects into customized content. 
+            Due to the high detail and recognition of human faces, face customization poses a greater challenge to image generation.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            FaceChain, an outstanding work in task-specific portrait generation, has received widespread attention in the community. 
+            It trains a person's LoRA model to incorporate face information, and generates customized portraits. 
+            However, due to the need to train users' LoRA models, FaceChain's pipeline is divided into two stages: training and inference, which greatly increases the user's cost. 
+            We propose a single-stage portrait generation model called FACT that does not require LoRA model training. 
+            We: 1. Integrate a transformer face feature extractor with the same structure as Stable Diffusion, which better enables SD to utilize face information; 
+            2. Generate using dense fine-grained features, with better replication effects; 
+            3. Seamlessly compatible with ControlNet and LoRA plugins, plug and play.
           </p>
           <p>
             We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
